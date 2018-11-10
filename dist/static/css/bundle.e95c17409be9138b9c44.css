@@ -1,0 +1,47 @@
+
+.footer[data-v-35c4d692] {
+  height: 200px;
+  width: 100%;
+  color: red;
+  background-color: #666666;
+  margin-top: 100px;
+}
+
+
+.title[data-v-7ba5bd90] {
+  font-size: 20px;
+  text-align: center;
+  color: #f0632c;
+}
+.content[data-v-7ba5bd90] {
+  font-size: 14px;
+  color: #333333;
+}
+.goddess[data-v-7ba5bd90] {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.goddess .left[data-v-7ba5bd90] {
+  margin-left: 50%;
+}
+.goddess .left__h4[data-v-7ba5bd90] {
+  font-size: 14px;
+}
+.goddess .left__img[data-v-7ba5bd90] {
+  width: 308px;
+  height: 433px;
+}
+.goddess .right[data-v-7ba5bd90] {
+  float: left;
+}
+.goddess .right__h4[data-v-7ba5bd90] {
+  font-size: 14px;
+}
+.goddess .right__img[data-v-7ba5bd90] {
+  width: 300px;
+  height: 150px;
+  background: url(/static/images/aea93e7b.timg.gif) no-repeat;
+}
+
+
+/*# sourceMappingURL=bundle.e95c17409be9138b9c44.css.map*/
