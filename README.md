@@ -652,4 +652,19 @@ module.exports = {
   }
 }
 ```
+* 代码提交之前对代码进行检查
+```
+npm i husky -D 
+```
+```javascript
+{
+  +++
+  "script": {
+    +++
+    "precommit": "eslint --fix --ext .js --ext .vue src/"
+  }
+}
+```
+该工具可以在我们提交代码时，调用"precommit"钩子，执行预处理操作，eslint不通过，无法提交
+
 ## 5、引入jquery [shimming](https://webpack.docschina.org/guides/shimming/)
