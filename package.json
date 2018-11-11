@@ -9,7 +9,7 @@
     "build": "node build/build.js",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "lint": "eslint --fix --ext .js,.vue src",
-    "precommit": "eslint --ext .js --ext .vue src/"
+    "precommit": "eslint --fix --ext .js --ext .vue src/"
   },
   "dependencies": {
     "lodash": "^4.17.11",
