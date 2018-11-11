@@ -21,7 +21,7 @@
 
 <script>
 import Footer from '@/footer'
-import {logFun} from '@/js/log'
+import { logFun } from '@/js/log'
 const _ = require('lodash')
 export default {
   components: {
@@ -34,46 +34,45 @@ export default {
       lodashValue: ''
     }
   },
-  mounted() {
-    logFun('App');
+  mounted () {
+    logFun('App')
     this.lodashValue = _.camelCase('Hello Word')
-  },
+  }
 }
 </script>
 
-
 <style lang="less" scoped>
-  .title {
-    font-size: 20px;
-    text-align: center;
-    color: #f0632c;
-  }
-  .content {
-    font-size: 14px;
-    color: #333333;
-  }
-  .goddess {
-    transition: 1s;
-    .left {
-      margin-left: 50%;
-      &__h4 {
-        font-size: 14px;
-      }
-      &__img {
-        width: 308px;
-        height: 433px;
-      }
-    }
-    .right {
-      float: left;
-      &__h4 {
-        font-size: 14px;
-      }
-      &__img {
-        width: 300px;
-        height: 150px;
-        background: url('./timg.gif') no-repeat;
-      }
-    }
-  }
+.title {
+	  font-size: 20px;
+	text-align: center;
+	color: #f0632c;
+}
+.content {
+	font-size: 14px;
+	color: #333333;
+}
+.goddess {
+	transition: 1s;
+	.left {
+		margin-left: 50%;
+		&__h4 {
+			font-size: 14px;
+		}
+		&__img {
+			width: 308px;
+			height: 433px;
+		}
+	}
+	.right {
+		float: left;
+		&__h4 {
+			font-size: 14px;
+		}
+		&__img {
+			width: 300px;
+			height: 150px;
+			background: url('./timg.gif') no-repeat;
+		}
+	}
+}
 </style>

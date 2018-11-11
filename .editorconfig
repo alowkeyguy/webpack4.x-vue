@@ -1,0 +1,17 @@
+# 标识为最终配置
+root = true
+
+# 所有文件配置
+[*]
+# 字符集
+charset = utf-8
+# 行结束符号
+end_of_line = lf
+# 缩紧
+indent_size = 4
+# 缩紧方式
+indent_style = space
+# 最后插入一行
+insert_final_newline = true
+# 删除最后的空格
+trim_trailing_whitespace = true

@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const AutoDllPlugin = require('autodll-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const AutoDllPlugin = require('autodll-webpack-plugin')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
@@ -31,9 +31,9 @@ module.exports = {
         use: [
           // {loader: 'style-loader'},
           MiniCssExtractPlugin.loader,
-          {loader: 'css-loader'},
-          {loader: 'less-loader'},
-          {loader: 'postcss-loader'},
+          { loader: 'css-loader' },
+          { loader: 'less-loader' },
+          { loader: 'postcss-loader' }
         ]
       },
       // es6 polyfill 具体配置在根目录 .babelrc文件里；也可以不配置，用它的默认配置，这样用它就没啥意义了
@@ -41,7 +41,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         }
       },
       // 拓展：http://www.cnblogs.com/ghost-xyx/p/5812902.html
@@ -74,6 +74,16 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
+      },
+      // 对js和vue文件使用eslint-loader进行处理，并排除了/node_modules/目录中的文件，并利用enforce字段指明，
+      // 该loader是进行预处理的loader，先对指定文件进行eslint后才会执行babel编译。
+      {
+        test: /\.(vue|js)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+        // 预处理
+        enforce: 'pre',
+        include: [path.join(__dirname, '..', 'src')]
       }
     ]
   },
@@ -84,7 +94,7 @@ module.exports = {
     // 生成一个新的index.html,将打包生成的js,css自动引入
     new HtmlWebpackPlugin({
       // 默认true
-      // When passing true or 'body' all javascript resources will be placed at the bottom of the body element. 
+      // When passing true or 'body' all javascript resources will be placed at the bottom of the body element.
       // 'head' will place the scripts in the head element
       // will inject the main bundle to index.html
       inject: true,
@@ -108,7 +118,7 @@ module.exports = {
         vue: [
           'vue',
           'vue-router'
-        ],
+        ]
         // [name] = jquery
         // jquery: [
         //   'jquery',
@@ -132,6 +142,6 @@ module.exports = {
       '@': path.resolve(__dirname, '../src')
     },
     // 在import这些拓展名的文件时，可以省略拓展名
-    extensions: ['*', '.js', '.json', '.vue'],
+    extensions: ['*', '.js', '.json', '.vue']
   }
-};
+}

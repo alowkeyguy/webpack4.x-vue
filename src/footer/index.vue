@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {logFun} from '@/js/log'
+import { logFun } from '@/js/log'
 const _ = require('lodash')
 export default {
   data () {
@@ -13,10 +13,10 @@ export default {
       lodashValue: ''
     }
   },
-  mounted() {
-    logFun('footer');
+  mounted () {
+    logFun('footer')
     this.lodashValue = _.add(6, 4)
-  },
+  }
 }
 </script>
 
