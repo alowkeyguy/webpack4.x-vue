@@ -36,7 +36,7 @@ module.exports = {
           { loader: 'postcss-loader' }
         ]
       },
-      // es6 polyfill 具体配置在根目录 .babelrc文件里；也可以不配置，用它的默认配置，这样用它就没啥意义了
+      // es6 polyfill 具体配置在根目录 .babelrc文件里，配置是babel-preset-env在处理，；也可以不配置，用它的默认配置，这样用它就没啥意义了
       {
         test: /\.js$/,
         exclude: /node_modules/,
