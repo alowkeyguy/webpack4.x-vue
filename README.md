@@ -181,7 +181,7 @@ module.exports = {
   }
 }
 ```
-我们还需要添加一个配置文件（.babelrc）在根目录下：
+我们还需要添加一个配置文件（.babelrc，为babel-preset-env配置）在根目录下：
 ```javascript
 /// .babelrc
 {
@@ -657,6 +657,7 @@ module.exports = {
 npm i husky -D 
 ```
 ```javascript
+<!-- package.json -->
 {
   +++
   "script": {
@@ -668,3 +669,19 @@ npm i husky -D
 该工具可以在我们提交代码时，调用"precommit"钩子，执行预处理操作，eslint不通过，无法提交
 
 ## 5、引入jquery [shimming](https://webpack.docschina.org/guides/shimming/)
+```
+npm i juery -D
+```
+```javascript
+<!-- base.config.js -->
+ module.exports = {
+   +++
+   plugins: [
+     +++
+     new webpack.ProvidePlugin({
+       $: 'jquery'
+     })
+   ]
+  };
+```
+这样就可以将$当全局变量使用了，当然eslint要配置个global，这里不介绍了
