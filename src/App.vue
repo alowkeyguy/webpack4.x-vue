@@ -20,25 +20,25 @@
 </template>
 
 <script>
-import Footer from '@/footer'
-import { logFun } from '@/js/log'
-const _ = require('lodash')
+import Footer from '@/footer';
+import { logFun } from '@/js/log';
+const _ = require('lodash');
 export default {
-  components: {
-    Foot: Footer
-  },
-  data () {
-    return {
-      title: 'hello word',
-      content: 'webpack4 搭建vue环境',
-      lodashValue: ''
-    }
-  },
-  mounted () {
-    logFun('App')
-    this.lodashValue = _.camelCase('Hello Word')
-  }
-}
+	components: {
+		Foot: Footer,
+	},
+	data() {
+		return {
+			title: 'hello word',
+			content: 'webpack4 搭建vue环境',
+			lodashValue: '',
+		};
+	},
+	mounted() {
+		logFun('App');
+		this.lodashValue = _.camelCase('Hello Word');
+	},
+};
 </script>
 
 <style lang="less" scoped>
