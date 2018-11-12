@@ -685,3 +685,5 @@ npm i juery -D
   };
 ```
 这样就可以将$当全局变量使用了，当然eslint要配置个global，这里不介绍了
+
+[vue-cli](https://github.com/vuejs/vue-cli/tree/dev/packages/@vue/cli-service/lib/config)
